@@ -4,6 +4,8 @@ As funções são blocos de código reutilizáveis que nos permitem encapsular t
 Para definir uma função em Python, utilizamos a palavra-chave def seguida do nome da função e parênteses. Opcionalmente, podemos especificar parâmetros dentro dos parênteses. O bloco de código da função é indentado após os dois pontos.
 
 Para chamar uma função, simplesmente escrevemos o nome da função seguido de parênteses
+
+Python Segue a regra LEGB, Local, Enclosing, Global, Built-in
 """
 
 def saudacao():
@@ -77,6 +79,8 @@ def calcularMedia(*numeros): #* coleta os argumentos e armazena numa tupla
 
 print("Média: " , calcularMedia( 10, 20 , 30))
 
+# Local Escope
+
 def soma_variavel(*numeros):
     total = 0
     for numero in numeros:
@@ -85,3 +89,42 @@ def soma_variavel(*numeros):
     #return sum(numeros)
 
 print(soma_variavel(3,4,3))
+
+# Enclosing Escope
+
+def outer_func():
+    msg = 'Hello there!'
+    res = ""  # Declare res in the enclosing scope
+
+    def inner_func():
+        nonlocal res  # Allow modification of an enclosing variable
+        res = 'How are you?'
+        print(msg)  # Accessing msg from outer_func()
+
+    inner_func()
+    print(res)  # Now res is accessible and modified
+
+outer_func()
+
+# Output:
+# Hello there!
+# How are you?
+
+
+# Global Escope
+
+my_var = 100
+
+def show_var ():
+    print(my_var)
+
+show_var
+print(my_var)
+
+# Built-in Escope
+
+print(str(45)) # '45'
+print(type(3.14)) # <class 'float'>
+print(isinstance(3, str)) # False
+
+print(f'Quero {my_var}')

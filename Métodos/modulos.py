@@ -14,7 +14,7 @@ utilidades.imprimir_mensagem(f"O resultado da soma é: {resultado}")
 nome = utilidades.obter_nome_usuario()
 utilidades.imprimir_mensagem(f"Olá, {nome}!")
 
-#meu_modelo
+#meu_modulo
 meu_modulo.saudar("João")  # Imprime "Olá, João!"
 resultado = meu_modulo.calcular_soma(5, 3)
 print(resultado)

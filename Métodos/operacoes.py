@@ -72,6 +72,8 @@ print(absolute_value) # 12.0
 
 int4 = 56
 
+print(round(float3))
+
 """
 
 bin(): Converte um inteiro para sua representação binaria como uma String.
@@ -97,5 +99,6 @@ print(hex_representation) # 0x38
 result1 = pow(2, 3) # 2 ** 3
 print(result1) # 8
 
-result2 = pow(2, 3, 5)
-print(result2)
+result2 = pow(2, 3, 5) # (2 ** 3) % 5
+print(result2) # 3
+
