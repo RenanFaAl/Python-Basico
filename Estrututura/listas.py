@@ -81,3 +81,39 @@ numbers.extend(even_number) # parecido com append(), mas você
 print(numbers) # [1, 2, 3, 4, 5, 6, 8, 10]
 
 # clear() remove todos os elemetos da lista
+
+# Refatoração
+
+even_numbers = [num for num in range(21) if num % 2 == 0]
+print(even_numbers)
+
+number1_to_5 = [1, 2, 3, 4, 5]
+result = [(num, 'Even') if num % 2 == 0 else (num, 'Odd') for num in number1_to_5]
+print(result)
+
+soma = sum(number1_to_5)
+print(soma) # 15
+
+total = sum(number1_to_5, 10) # pode adicioanar um valor de start
+print(total) # 25
+
+
+words = ['tree', 'sky', 'mountain', 'river', 'cloud', 'sun']
+
+def is_long_word(word):
+    return len(word) > 4
+
+long_words = list(filter(is_long_word, words)) # filter() aceita uma função e um iterável, nesta ordem
+print(long_words) # ['mountain', 'river', 'cloud']
+# filter() seleciona itens de um iterável que batem com uma condição específica
+
+
+
+celsius = [0, 10, 20, 30, 40]
+
+def to_fahrenheit(temp):
+    return (temp * 9/5) + 32
+
+fahrenheit = list(map(to_fahrenheit,celsius)) # igual ao filter na questão do que aceita
+print(fahrenheit) # [32.0, 50.0, 68.0, 86.0, 104.0]
+# map() aplica uma função a cada elemento de um iterável
