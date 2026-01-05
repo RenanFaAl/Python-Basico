@@ -26,3 +26,61 @@ print(pessoa.items())   # Imprime dict_items([("nome", "João"), ("idade", 25), 
 pessoa.update({"profissao": "Engenheiro"})
 print(pessoa)  # Imprime {"nome": "João", "idade": 25, "cidade": "Madri", "profissao": "Engenheiro"}
 
+pizza = {
+    'name': 'Margherita Pizza',
+    'price': 8.9,
+    'calories_per_slice': 250,
+    'toppings': ['mozzarella', 'basil']
+}
+
+pizza = dict([('name', 'Margherita Pizza'), ('price', 8.9), ('calories_per_slice', 250), ('toppings', ['mozzarella', 'basil'])])
+
+print(pizza.get("price")) # 8.9
+print(pizza.get("toppings", [])) # retorna ['mozzarella', 'basil'], chave e default, se a chave não existir, devolve o default
+
+print(pizza.pop('total_price', 10)) # retorna 10, chave e default, caso não exista nenhum dos dois vai gerar KeyError
+
+# print(pizza.popitem) remove o ultimo par adicionado
+pizza.update({ 'price': 15, 'total_time': 25})
+
+print(pizza)
+
+
+products = {
+    'Laptop': 990,
+    'Smartphone': 600,
+    'Tablet': 250,
+    'Headphones': 70,
+}
+
+for price in products.values():
+    print(price) # 990 600 250 70
+
+for product in products:
+    print(product) # Laptop Smartphone Tablet Headphones
+
+for product in products.items():
+    print(product) 
+    """
+    ('Laptop', 990)
+    ('Smartphone', 600)
+    ('Tablet', 250)
+    ('Headphones', 70)
+    """
+
+for product, price in products.items():
+    products[product] = round(price * 0.8)
+
+print(products) # {'Laptop': 792, 'Smartphone': 480, 'Tablet': 200, 'Headphones': 56}
+
+for index, product in enumerate(products):
+    print(index, product)
+    """
+    0 Laptop
+    1 Smartphone
+    2 Tablet
+    3 Headphones
+    """
+
+for index, product in enumerate(products.items()):
+    print(index, product)

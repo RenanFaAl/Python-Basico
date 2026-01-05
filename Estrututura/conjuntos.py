@@ -48,3 +48,29 @@ print(frutas)  # Imprime {"maçã", "laranja", "pera"}
 
 frutas.clear()
 print(frutas)  # Imprime set()
+
+
+my_set = {1, 2, 3, 4, 5}
+your_set = {2, 3, 4, 6}
+
+print(your_set.issubset(my_set)) # False
+print(my_set.issuperset(your_set)) # False
+
+print(my_set.isdisjoint(your_set)) # False, verifica se 2 sets não tem valores em comum
+
+my_set | your_set # {1, 2, 3, 4, 5, 6}
+
+my_set & your_set # {2, 3, 4}
+
+my_set - your_set # {1, 5}, retorna valores que tão em my_set, mas não em your_set
+
+my_set ^ your_set # {1, 5, 6}, retorna elementos que são únicos entre os sets, não estando em ambos.
+
+# |= &= -= ^=, tudo isso funciona por assigment
+
+my_set -= your_set
+
+print(my_set) # {1, 5}
+print(5 in my_set) # {1, 5}
+
+

@@ -117,3 +117,13 @@ def to_fahrenheit(temp):
 fahrenheit = list(map(to_fahrenheit,celsius)) # igual ao filter na questão do que aceita
 print(fahrenheit) # [32.0, 50.0, 68.0, 86.0, 104.0]
 # map() aplica uma função a cada elemento de um iterável
+
+def mult_list(item):
+    return item * 2
+
+new_list = list(map(mult_list,celsius))
+
+n_list = [temp * 2 for temp in celsius]
+
+print(new_list)
+print(n_list)
