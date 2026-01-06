@@ -71,6 +71,6 @@ my_set ^ your_set # {1, 5, 6}, retorna elementos que são únicos entre os sets,
 my_set -= your_set
 
 print(my_set) # {1, 5}
-print(5 in my_set) # {1, 5}
+print(5 in my_set) # True
 
 

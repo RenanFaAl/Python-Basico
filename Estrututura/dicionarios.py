@@ -82,5 +82,21 @@ for index, product in enumerate(products):
     3 Headphones
     """
 
+for price in enumerate(products.values()):
+    print(price)
+    """
+    (0, 990)
+    (1, 600)
+    (2, 250)
+    (3, 70)
+    """
+
+
 for index, product in enumerate(products.items()):
     print(index, product)
+    """
+    0 ('Laptop', 792)
+    1 ('Smartphone', 480)
+    2 ('Tablet', 200)
+    3 ('Headphones', 56)
+    """
