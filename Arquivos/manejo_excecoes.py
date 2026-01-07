@@ -52,3 +52,21 @@ try:
     funcao()
 except Exception as e:
     print(f"Erro: {str(e)}")
+
+try:
+    number = int('abc')
+    result = 10 / number
+except ValueError: # Captura erro específico
+    print('That was not a valid number.')
+except ZeroDivisionError:
+    print("Can't divide by zero.")
+
+
+try:
+    x = 10 / 2
+except ZeroDivisionError:
+    print("You can't divide by zero!")
+else: # Roda se nenhuma excessão surgir
+    print('Division successful:', x)
+finally: # Roda sempre
+    print('This block always runs.')
