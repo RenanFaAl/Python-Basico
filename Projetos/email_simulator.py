@@ -87,8 +87,9 @@ def main():
     tory = User('Tory')
     ramy = User('Ramy')        
     
-    print(tory.send_email(ramy, 'Hello', 'Hi Ramy, just saying hello!'))
-    ramy.send_email(tory, 'Re: Hello', 'Hi Tory, hope you are fine.')
+    tory.send_email(ramy, 'Hello', 'Hi Ramy, just saying hello!') # Email sent from Tory to Ramy!
+
+    ramy.send_email(tory, 'Re: Hello', 'Hi Tory, hope you are fine.') # Email sent from Ramy to Tory!
     
 
     ramy.check_inbox()
@@ -96,5 +97,26 @@ def main():
     ramy.delete_email(1)
     ramy.check_inbox()
 
-    if __name__ == '__main__': # Garante que a função main só rode quando o script é executado diretamente, e não quando é importado como módulo
-        main()
+    """
+    Ramy's Inbox:
+
+    Your Emails:
+    1. [Unread] From: Tory | Subject: Hello | Time: 2026-01-10 00:38
+
+    --- Email ---
+    From: Tory
+    To: Ramy
+    Subject: Hello
+    Received: 2026-01-10 00:38
+    Body: Hi Ramy, just saying hello!
+    ------------
+
+    Email deleted.
+
+
+    Ramy's Inbox:
+    Your inbox is empty.
+    """
+
+if __name__ == '__main__': # Garante que a função main só rode quando o script é executado diretamente, e não quando é importado como módulo
+    main()
