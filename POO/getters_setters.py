@@ -4,6 +4,7 @@ class Circle:
     def __init__(self, radius):
         self._radius = radius
 
+    # Getter
     @property
     def radius(self):
         return self._radius
