@@ -58,3 +58,5 @@ print(msg.capitalize()) # Hello world, devolve a string com a primeira letra cap
 print(msg.isupper()) # False, verifica se a string toda está em upper case
 
 print(msg.islower()) # False, verifica se a string toda está em lower case
+
+print(msg.swapcase()) # hELLO wORLD
